@@ -1,0 +1,101 @@
+/* Estilo general */
+body {
+    background-color: var(--fondo-negro);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header-text {
+    text-align: center;
+    color: var(--texto-blanco);
+    font-size: 32px;
+    margin-top: 50px;
+}
+
+.highlight {
+    color: var(--rojo);
+}
+
+.image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.circle-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 -30px;
+    transition: transform 0.3s ease;
+}
+
+.circle-img:hover {
+    transform: scale(1.1);
+}
+
+/* Estilo de los botones */
+.button-container {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+.btn {
+    background: linear-gradient(to right, #d3d3d3, #000000); /* Degradado gris claro a negro en los botones */
+    color: var(--texto-blanco);
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 50px; /* Bordes redondeados para un semicírculo */
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+
+
+.btn:hover {
+    background-color: #d40000;
+}
+
+
+/* Botones alineados de forma equidistante */
+.button-container > .btn:nth-child(1) {
+    margin-left: 50px; /* Primer botón con margen izquierdo */
+}
+
+.button-container > .btn:nth-child(2) {
+    margin: 0 20px; /* Botón del medio con espacio entre los otros dos */
+}
+
+.button-container > .btn:nth-child(3) {
+    margin-right: 50px; /* Tercer botón con margen derecho */
+}
+
+/* Estilo de la versión responsiva */
+@media (max-width: 768px) {
+    .header-text {
+        font-size: 24px;
+    }
+
+    .circle-img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .button-container {
+        padding: 0 20px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+    }
+}
