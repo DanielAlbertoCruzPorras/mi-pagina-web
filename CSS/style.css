@@ -1,101 +1,116 @@
+@import url(variables.css);
+
 /* Estilo general */
-body {
+body{
     background-color: var(--fondo-negro);
-    font-family: Arial, sans-serif;
+}
+
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+.left{
+    width: 600px;
+    height: 680px;
+    background: var(--fondo-negro);
+    position: absolute;
+    top: 80px;
+    left: 180px;
+}
 .header-text {
-    text-align: center;
+    font-family: "Montserrat-ExtraBold";
     color: var(--texto-blanco);
-    font-size: 32px;
+    font-size: 64px;
     margin-top: 50px;
 }
-
 .highlight {
     color: var(--rojo);
 }
-
 .image-container {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 30px;
 }
-
 .circle-img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    margin: 0 -30px;
+    margin: 0 -20px;
     transition: transform 0.3s ease;
 }
-
 .circle-img:hover {
     transform: scale(1.1);
 }
+.lorem{
+    margin-top: 30px;
+    font-family: "Montserrat-Regular";
+    color: var(--texto-blanco);
+    font-size: 24px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.butn {
+    font-family: "Montserrat-Regular";
+    color: var(--texto-blanco);
+    font-size: 24px;
+    background: var(--rojo);
+    border: none;
+    padding: 24px 40px;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: background-color 0.2s ease;
+}
+.butn:hover {
+    background-color: #3f1111;
+}
+
+.right{
+    width: 650px;
+    height: 800px;
+    background: var(--fondo-negro);
+    position: absolute;
+    top: 80px;
+    right: 180px;
+}
+.big-img {
+    width: 650px;
+    height: 706px;
+    border-radius: 50%;
+}
 
 /* Estilo de los botones */
-.button-container {
+.bottom{
+    width: 1500px;
+    height: 100px;
+    background: var(--fondo-negro);
     position: absolute;
-    bottom: 20px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 50px;
-    box-sizing: border-box;
+    bottom: 80px;
+    left: 175px;
 }
-
 .btn {
-    background: linear-gradient(to right, #d3d3d3, #000000); /* Degradado gris claro a negro en los botones */
+    background: linear-gradient(to right, var(--texto-blanco), var(--fondo-negro) 80%); /* Degradado gris claro a negro en los botones */
     color: var(--texto-blanco);
     border: none;
-    padding: 15px 30px;
-    font-size: 18px;
-    cursor: pointer;
-    border-radius: 50px; /* Bordes redondeados para un semicírculo */
-    transition: background-color 0.3s ease;
-    position: relative;
+    padding: 24px 40px;
+    font-size: 24px;
+    font-family: "Montserrat-SemiBold";
+    border-radius: 50px;
+    display: inline-block;
 }
-
-
-.btn:hover {
-    background-color: #d40000;
-}
-
-
 /* Botones alineados de forma equidistante */
-.button-container > .btn:nth-child(1) {
+.bottom > .btn:nth-child(1) {
+    margin: 10px;
     margin-left: 50px; /* Primer botón con margen izquierdo */
 }
-
-.button-container > .btn:nth-child(2) {
-    margin: 0 20px; /* Botón del medio con espacio entre los otros dos */
+.bottom > .btn:nth-child(2) {
+    margin-left: 182px;
+    margin-right: 182px; /* Botón del medio con espacio entre los otros dos */
 }
-
-.button-container > .btn:nth-child(3) {
+.bottom > .btn:nth-child(3) {
     margin-right: 50px; /* Tercer botón con margen derecho */
 }
 
-/* Estilo de la versión responsiva */
-@media (max-width: 768px) {
-    .header-text {
-        font-size: 24px;
-    }
-
-    .circle-img {
-        width: 80px;
-        height: 80px;
-    }
-
-    .button-container {
-        padding: 0 20px;
-    }
-
-    .btn {
-        padding: 10px 20px;
-    }
-}
