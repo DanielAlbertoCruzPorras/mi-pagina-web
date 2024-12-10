@@ -1,6 +1,8 @@
 :root {
-    --texto-blanco: white;
-    --rojo: red;
+    --fondo-negro: #080C15;
+    --texto-blanco: #FFFFFF;
+    --rojo: #CD292A;
+    --espacio-boton: 20px;
 }
 
 @font-face{
