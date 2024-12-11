@@ -93,7 +93,7 @@ body{
     left: 175px;
 }
 .btn {
-    background: linear-gradient(to right, var(--texto-blanco), var(--fondo-negro) 80%); /* Degradado gris claro a negro en los botones */
+    background: linear-gradient(to right, var(--texto-blanco), transparent 80%); /* Degradado gris claro a negro en los botones */
     color: var(--texto-blanco);
     border: none;
     padding: 24px 40px;
